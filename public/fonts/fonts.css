@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Nastup';
+  src: url('./Nastup-Basic.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./Raleway-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('./Oswald-Regular.ttf') format('truetype'),
+}
+
+@layer base {
+  html {
+    font-family: "Raleway", sans-serif;
+  }
+}

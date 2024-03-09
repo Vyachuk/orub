@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: white;
+}
+
+body {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media screen and (min-width: 834px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.hero-backdrop {
+  background-image: url("../../public/img/heroMob.webp");
+  @media screen and (min-width: 375px) {
+    background-image: url("../../public/img/heroTab.webp");
+  }
+  @media screen and (min-width: 834px) {
+    background-image: url("../../public/img/heroDesk.webp");
+  }
+}
