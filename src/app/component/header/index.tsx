@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { Button, Logo } from "../UI";
 
 export const Header = () => {
@@ -25,7 +25,7 @@ export const Header = () => {
           </li>
           <li>
             <div className="xl:hidden text-white w-12 h-12">
-              <GiHamburgerMenu size="10x" />
+              <RxHamburgerMenu size={50} />
             </div>
           </li>
         </ul>

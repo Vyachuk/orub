@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import backImage from "/public/img/aboutBack.webp";
 import { DescriptionMarkup } from "../descriptionMarkup";
+import { AboutUsBackDrop } from "./AboutUsBackDrop";
 
 const info = {
   title: "Про нас",
@@ -16,12 +17,13 @@ export const AboutUs = () => {
     <section className="bg-black pt-[80px] sm:pt-[305px] pb-[40px] sm:pb-[105px] sm:pb-[200px] xl:py-[150px] relative w-full">
       <DescriptionMarkup data={info}>
         <div className="hidden sm:block absolute top-[40px] xl:top-[-190px] xl:w-[600px] xl:h-[720px] xl:right-[60%] inset-x-0 mx-auto xl:ml-auto w-[654px] z-10 xl:z-30">
-          <Image
+          {/* <Image
             src={backImage}
             width={654}
             height={787}
             alt="150 оруб логотип"
-          />
+          /> */}
+          <AboutUsBackDrop />
         </div>
       </DescriptionMarkup>
     </section>
