@@ -5,7 +5,7 @@ import backImage from "/public/img/aboutBack.webp";
 export const AboutUs = () => {
   return (
     <section className="bg-black pt-[80px] sm:pt-[305px] pb-[40px] sm:pb-[105px] xl:py-[150px] relative w-full">
-      <div className="py-[40px] px-[22px] bg-[#2F422E] sm:min-h-[415px] xl:w-[845px] xl:ml-auto sm:py-[50px]  sm:px-[64px]  relative z-20">
+      <div className="py-[40px] px-[22px] bg-[#2F422E] sm:min-h-[415px] xl:w-[63%] xl:ml-auto sm:py-[50px]  sm:px-[64px]  relative z-20">
         <h2 className="text-xl sm:text-3xl text-center font-normal font-nastup leading-loose tracking-tight">
           Про нас
         </h2>
@@ -24,7 +24,7 @@ export const AboutUs = () => {
           нашої країни. Наш досвід - це наша сила.
         </p>
       </div>
-      <div className="hidden sm:block absolute top-[40px] xl:top-[-190px] xl:w-[600px] xl:h-[720px] xl:right-[1000px] inset-x-0 mx-auto w-[654px] z-10 xl:z-30">
+      <div className="hidden sm:block absolute top-[40px] xl:top-[-190px] xl:w-[600px] xl:h-[720px] xl:right-[60%] inset-x-0 mx-auto xl:ml-auto w-[654px] z-10 xl:z-30">
         <Image
           src={backImage}
           width={654}
