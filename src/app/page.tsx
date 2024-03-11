@@ -19,9 +19,9 @@ export default function Home() {
         <Hero />
         <AboutUs />
         <Feature />
-        {/* <Video />
+        {/* <Video /> */}
         <Description />
-        <Form />
+        {/* <Form />
         <Donate /> */}
       </main>
       {/* <footer>

@@ -8,8 +8,8 @@ import { Button } from "../UI";
 
 export const Feature = () => {
   return (
-    <section className="bg-black flex flex-col gap-4 pb-[40px] sm:pt-[100px] sm:pb-[50px] xl:px-0">
-      <h2 className=" mx-auto my-0 max-w-80 text-center text-xl font-normal font-nastup leading-loose leading-7 tracking-wider ">
+    <section className="bg-black flex flex-col gap-4 sm:gap-9 pb-[40px] sm:pb-[50px] xl:px-0">
+      <h2 className=" mx-auto my-0 max-w-[80%] text-center text-xl sm:text-3xl font-normal font-nastup leading-loose leading-7 tracking-wider ">
         З “Ударними” до перемоги
       </h2>
       <ul className="flex flex-wrap w-[343px] sm:w-[754px] xl:w-[1440px]  mx-auto my-0">
