@@ -10,7 +10,7 @@ export const Feature = () => {
   return (
     <section className="bg-black flex flex-col gap-4 sm:gap-9 pb-[40px] sm:pb-[50px] xl:px-0">
       <h2 className=" mx-auto my-0 max-w-[80%] text-center text-xl sm:text-3xl font-normal font-nastup leading-loose leading-7 tracking-wider ">
-        З “Ударними” до перемоги
+        {"З “Ударними” до перемоги"}
       </h2>
       <ul className="flex flex-wrap w-[343px] sm:w-[754px] xl:w-[1440px]  mx-auto my-0">
         <li
@@ -18,7 +18,7 @@ export const Feature = () => {
           className="sm:order-2 flex-col px-[28px] flex items-center justify-center gap-6 w-full h-[343px] sm:h-[377px] xl:h-[360px] sm:w-[50%] xl:w-[25%] bg-[#2F422E]"
         >
           <h3 className="text-lg font-medium font-oswald leading-7">
-            Принцип: Невтомна Відвага{" "}
+            {"Принцип: Невтомна Відвага"}
           </h3>
           <p>
             {
@@ -42,12 +42,12 @@ export const Feature = () => {
           className="sm:order-3 xl:order-4 flex-col px-[28px] flex items-center justify-center gap-6 w-full h-[343px] sm:h-[377px] xl:h-[360px] sm:w-[50%] xl:w-[25%] bg-[#2F422E]"
         >
           <h3 className="text-lg font-medium font-oswald leading-7">
-            Принцип: Професіоналізм у Всьому
+            {"Принцип: Професіоналізм у Всьому"}
           </h3>
           <p>
-            Кожен у нашому батальйоні - це висококваліфікований професіонал,
-            відданий досягненню вищих стандартів у кожній операції. Наш
-            професіоналізм - це гарантія якості та ефективності нашої роботи.
+            {
+              "Кожен у нашому батальйоні - це висококваліфікований професіонал, відданий досягненню вищих стандартів у кожній операції. Наш професіоналізм - це гарантія якості та ефективності нашої роботи."
+            }
           </p>
         </li>
         <li
@@ -66,12 +66,12 @@ export const Feature = () => {
           className="sm:order-6 xl:order-5 flex-col px-[28px] flex items-center justify-center gap-6 w-full h-[343px] sm:h-[377px] xl:h-[360px] sm:w-[50%] xl:w-[25%] bg-[#2F422E]"
         >
           <h3 className="text-lg font-medium font-oswald leading-7">
-            Принцип: Витримка та Рішучість
+            {"Принцип: Витримка та Рішучість"}
           </h3>
           <p>
-            Витримка та рішучість ведуть нас вперед у найскладніших ситуаціях.
-            Ми відточуємо ці якості кожен день, щоб бути готовими до будь-яких
-            викликів, з якими ми можемо зіткнутися.
+            {
+              "Витримка та рішучість ведуть нас вперед у найскладніших ситуаціях. Ми відточуємо ці якості кожен день, щоб бути готовими до будь-яких викликів, з якими ми можемо зіткнутися."
+            }
           </p>
         </li>
         <li
@@ -90,12 +90,12 @@ export const Feature = () => {
           className="sm:order-7  flex-col px-[28px] flex items-center justify-center gap-6 w-full h-[343px] sm:h-[377px] xl:h-[360px] sm:w-[50%] xl:w-[25%] bg-[#2F422E]"
         >
           <h3 className="text-lg font-medium font-oswald leading-7">
-            Принцип: Братерство і Підтримка
+            {"Принцип: Братерство і Підтримка"}
           </h3>
           <p>
-            Ми - не просто команда, а брати та сестри у спільній боротьбі. Наш
-            сильний командний дух, взаємне братерство та підтримка кожного з нас
-            є основою нашої єдності та витривалості на полі бою.
+            {
+              "Ми - не просто команда, а брати та сестри у спільній боротьбі. Наш сильний командний дух, взаємне братерство та підтримка кожного з нас є основою нашої єдності та витривалості на полі бою."
+            }
           </p>
         </li>
         <li
