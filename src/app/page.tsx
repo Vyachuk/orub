@@ -18,8 +18,8 @@ export default function Home() {
       <main>
         <Hero />
         <AboutUs />
-        {/* <Feature />
-        <Video />
+        <Feature />
+        {/* <Video />
         <Description />
         <Form />
         <Donate /> */}

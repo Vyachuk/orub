@@ -6,7 +6,7 @@ export const AboutUs = () => {
   return (
     <section className="bg-black pt-[80px] sm:pt-[305px] pb-[40px] sm:pb-[105px] xl:py-[150px] relative w-full">
       <div className="py-[40px] px-[22px] bg-[#2F422E] sm:min-h-[415px] xl:w-[63%] xl:ml-auto sm:py-[50px]  sm:px-[64px]  relative z-20">
-        <h2 className="text-xl sm:text-3xl text-center font-normal font-nastup leading-loose tracking-tight">
+        <h2 className="text-xl sm:text-3xl text-center font-normal font-nastup leading-loose tracking-wider">
           Про нас
         </h2>
         <div class="w-40 h-[1px] border-2 border-white mx-auto  mb-8"></div>
