@@ -30,7 +30,9 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-      {/* <Button text={"Заповнити анкету"} handler={() => {}}/> */}
+      <div className="hidden xl:block">
+        <Button text={"Заповнити анкету"} handler={() => {}} />
+      </div>
     </>
   );
 };

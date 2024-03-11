@@ -7,7 +7,7 @@ type ButtonProps = {
 
 export const Button: React.FC<ButtonProps> = ({ text, handler }) => {
   return (
-    <div className="w-64 h-16 bg-[#2F422E] flex mx-auto my-0 border border-white justify-center items-center gap-2.5">
+    <div className="w-64 h-16 bg-[#2F422E] flex border border-white justify-center items-center">
       <button
         className="text-base font-normal font-nastup leading-normal tracking-tight"
         onClick={handler}

@@ -12,13 +12,13 @@ import { Donate } from "./component/donate";
 export default function Home() {
   return (
     <>
-      <header className="m-0 fixed py-4 z-50 flex justify-between items-center left-0 w-full px-4 bg-[#2F422E]/[.20] backdrop-blur">
+      <header className="m-0 fixed py-4 z-50 flex justify-between items-center w-full bg-[#2F422E]/[.05] backdrop-blur-sm">
         <Header />
       </header>
       <main>
         <Hero />
-        {/* <AboutUs />
-        <Feature />
+        <AboutUs />
+        {/* <Feature />
         <Video />
         <Description />
         <Form />
