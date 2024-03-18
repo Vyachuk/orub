@@ -96,7 +96,6 @@ export const FormSection = () => {
             <DatePicker
               name="birthday"
               value={formik.values.birthday}
-              inputFormat="dd-mm-yyyy"
               onChange={(newValue) => {
                 formik.setFieldValue("birthday", newValue);
               }}
@@ -106,7 +105,7 @@ export const FormSection = () => {
                   border: "none",
                 },
               }}
-              renderInput={(params) => <TextField {...params} />}
+              // renderInput={(params) => <TextField {...params} />}
             />
           </div>
         </LocalizationProvider>
