@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  background-color: black;
   color: white;
 }
 
@@ -22,6 +23,60 @@ header {
   }
 }
 
+footer {
+  background-image: url("../../public/img/footer_mob.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: 500px) {
+    background-image: url("../../public/img/footer_tablet.webp");
+    background-position-x: right;
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url("../../public/img/footer_desc.webp");
+    background-position-x: right;
+  }
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input {
+  background: none;
+  border-bottom: 1px solid white !important;
+  color: white !important;
+  padding-left: 8px !important;
+  width: 100%;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+
+  line-height: 2.25rem !important;
+  font-size: 1.5rem !important;
+  font-family: "Raleway" !important;
+}
+
+input::placeholder {
+  white-space: normal;
+
+  max-width: 100%;
+}
+
+input:placeholder-shown {
+  line-height: 2.25rem;
+  font-size: 1.5rem;
+  font-family: "Raleway";
+  color: #6f6f6f;
+}
+input:focus,
+input:focus-visible {
+  outline: none !important;
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+
 .hero-backdrop {
   background-image: url("../../public/img/heroMob.webp");
   @media screen and (min-width: 375px) {
@@ -30,4 +85,17 @@ header {
   @media screen and (min-width: 834px) {
     background-image: url("../../public/img/heroDesk.webp");
   }
+}
+
+.MuiInput-underline:after {
+  border-bottom: 2px solid white !important;
+}
+
+.MuiInput-underline:before {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42) !important;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  fill: white;
+  stroke: white;
 }

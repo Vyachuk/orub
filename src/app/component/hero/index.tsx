@@ -1,11 +1,17 @@
 import React from "react";
-import { FiInstagram } from "react-icons/fi";
-import { RiFacebookCircleLine } from "react-icons/ri";
+
 import { Button } from "../UI";
+import Link from "next/link";
+import { CiInstagram } from "react-icons/ci";
+import { CiFacebook } from "react-icons/ci";
+import SmoothScrollLink from "@/app/utils/SmoothScrollLink";
 
 export const Hero = () => {
   return (
-    <section className="hero-backdrop font-nastup bg-no-repeat bg-right object-fit bg-cover w-[100vw] h-[813px] sm:bg-center lx:bg-right">
+    <section
+      id="hero"
+      className="hero-backdrop font-nastup bg-no-repeat bg-right object-fit bg-cover w-[100vw] h-[813px] sm:bg-center lx:bg-right"
+    >
       <h1 className="font-nastup leading-9 sm:leading-[4rem] text-2xl sm:text-5xl pt-[475px] sm:pt-[200px] font-thin max-w-[450px] sm:max-w-[550px] xl:max-w-[700px] tracking-wide">
         150 Окремий розвідувально- ударний батальйон
       </h1>
@@ -14,11 +20,31 @@ export const Hero = () => {
         Відвага, що Перемагає Темряву
       </div>
       <div className="flex justify-center sm:justify-start">
-        <Button text="Приєднатись" handler={() => {}} />
+        <SmoothScrollLink targetId="form">
+          <Button text="Приєднатись" handler={() => {}} />
+        </SmoothScrollLink>
       </div>
       <div className="hidden xl:flex flex-col gap-6 absolute right-20 top-[360px] ">
-        <FiInstagram size={36} />
-        <RiFacebookCircleLine size={36} />
+        <Link
+          href={"https://www.instagram.com/150oryb?igsh=dnl3YWh6bW53MHlw"}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <CiInstagram
+            size={36}
+            className="hover:fill-[#2F422E] hover:cursor-pointer"
+          />
+        </Link>
+        <Link
+          href={"https://www.facebook.com/profile.php?id=61553287769872"}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <CiFacebook
+            size={36}
+            className="hover:fill-[#2F422E] hover:cursor-pointer"
+          />
+        </Link>
       </div>
     </section>
   );

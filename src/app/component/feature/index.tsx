@@ -5,12 +5,16 @@ import featureImg2 from "/public/img/feature/feature2_mob.webp";
 import featureImg3 from "/public/img/feature/feature3_mob.webp";
 import featureImg4 from "/public/img/feature/feature4_mob.webp";
 import { Button } from "../UI";
+import SmoothScrollLink from "@/app/utils/SmoothScrollLink";
 
 export const Feature = () => {
   return (
-    <section className="bg-black flex flex-col gap-4 sm:gap-9 pb-[40px] sm:pb-[50px] xl:px-0">
+    <section
+      id="features"
+      className="bg-black flex flex-col gap-4 sm:gap-9 pb-[40px] sm:pb-[50px] xl:px-0"
+    >
       <h2 className=" mx-auto my-0 max-w-[80%] text-center text-xl sm:text-3xl font-normal font-nastup leading-loose leading-7 tracking-wider ">
-        {"З “Ударними” до перемоги"}
+        {"З 150-ОРУБ до перемоги"}
       </h2>
       <ul className="flex flex-wrap w-[343px] sm:w-[754px] xl:w-[1440px]  mx-auto my-0">
         <li
@@ -111,7 +115,9 @@ export const Feature = () => {
         </li>
       </ul>
       <div className="mx-auto my-0">
-        <Button text="Приєднатись" handler={() => {}} />
+        <SmoothScrollLink targetId="form">
+          <Button text="Приєднатись" handler={() => {}} />
+        </SmoothScrollLink>
       </div>
     </section>
   );

@@ -11,7 +11,7 @@ const info = {
 
 export const Description = () => {
   return (
-    <section className="bg-black sm:bg-[#2F422E]">
+    <section id="description" className="bg-black sm:bg-[#2F422E] py-[40px]">
       <DescriptionMarkup data={info} />
     </section>
   );

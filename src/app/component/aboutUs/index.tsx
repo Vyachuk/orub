@@ -14,7 +14,10 @@ const info = {
 
 export const AboutUs = () => {
   return (
-    <section className="bg-black pt-[80px] sm:pt-[305px] pb-[40px] sm:pb-[105px] sm:pb-[200px] xl:py-[150px] relative w-full">
+    <section
+      id="about-us"
+      className="bg-black pt-[80px] sm:pt-[305px] pb-[40px] sm:pb-[105px] sm:pb-[200px] xl:py-[150px] relative w-full"
+    >
       <DescriptionMarkup data={info}>
         <div className="hidden sm:block absolute top-[40px] xl:top-[-190px] xl:w-[600px] xl:h-[720px] xl:right-[60%] inset-x-0 mx-auto xl:ml-auto w-[654px] z-10 xl:z-30">
           {/* <Image

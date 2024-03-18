@@ -1,37 +1,44 @@
 import React from "react";
 import Link from "next/link";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Button, Logo } from "../UI";
+import SmoothScrollLink from "@/app/utils/SmoothScrollLink";
 
 export const Header = () => {
   return (
     <>
       <div className="">
-        <Logo height={"78"} />
+        <SmoothScrollLink targetId="hero">
+          <Logo />
+        </SmoothScrollLink>
       </div>
       <nav>
         <ul className="flex gap-[77px]">
           <li className="hidden xl:inline">
-            <Link href="#about-us">Про нас</Link>
+            <SmoothScrollLink targetId="about-us">Про нас</SmoothScrollLink>
           </li>
           <li className="hidden xl:inline">
-            <Link href="#features">Принципи</Link>
+            <SmoothScrollLink targetId="features">Принципи</SmoothScrollLink>
           </li>
           <li className="hidden xl:inline">
-            <Link href="#description">Філософія</Link>
+            <SmoothScrollLink targetId="description">
+              Філософія
+            </SmoothScrollLink>
           </li>
           <li className="hidden xl:inline">
-            <Link href="#donate">Донат</Link>
+            <SmoothScrollLink targetId="donate">Донат</SmoothScrollLink>
           </li>
           <li>
             <div className="xl:hidden text-white w-12 h-12">
-              <RxHamburgerMenu size={50} />
+              <GiHamburgerMenu size={50} />
             </div>
           </li>
         </ul>
       </nav>
       <div className="hidden xl:block">
-        <Button text={"Заповнити анкету"} handler={() => {}} />
+        <SmoothScrollLink targetId="form">
+          <Button text={"Заповнити анкету"} handler={() => {}} />
+        </SmoothScrollLink>
       </div>
     </>
   );

@@ -1,13 +1,14 @@
 "use client";
 import { Header } from "./component/header";
-import { Footer } from "./component/footer";
 import { Hero } from "./component/hero";
 import { AboutUs } from "./component/aboutUs";
 import { Feature } from "./component/feature";
 import { Description } from "./component/description";
-import { Video } from "./component/video";
-import { Form } from "./component/form";
+
+import { FormSection } from "./component/form";
+import { VideoSection } from "./component/video";
 import { Donate } from "./component/donate";
+import { Footer } from "./component/footer";
 
 export default function Home() {
   return (
@@ -19,14 +20,13 @@ export default function Home() {
         <Hero />
         <AboutUs />
         <Feature />
-        {/* <Video /> */}
+        <VideoSection />
         <Description />
-        {/* <Form />
-        <Donate /> */}
+        <FormSection />
+        <Donate />
       </main>
-      {/* <footer>
-        <Footer />
-      </footer> */}
+
+      <Footer />
     </>
   );
 }
