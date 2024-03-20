@@ -218,7 +218,13 @@ export const FormSection = () => {
             name="policy"
             checked={formik.values.policy}
             onChange={formik.handleChange}
-            className="flex justify-center items-center"
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "48px",
+              height: "48px",
+            }}
           />
           <span className="w-[300px] font-raleway text-base ">
             Чи даєте Ви згоду на обробку персональних даних?{" "}

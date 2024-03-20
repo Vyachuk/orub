@@ -1,13 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import { GiHamburgerMenu } from "react-icons/gi";
+
 import { Button, Logo } from "../UI";
 import SmoothScrollLink from "@/app/utils/SmoothScrollLink";
+import { BurgerMenu } from "../burger";
 
 export const Header = () => {
   return (
     <>
-      <div className="">
+      <div>
         <SmoothScrollLink targetId="hero">
           <Logo />
         </SmoothScrollLink>
@@ -29,9 +30,7 @@ export const Header = () => {
             <SmoothScrollLink targetId="donate">Донат</SmoothScrollLink>
           </li>
           <li>
-            <div className="xl:hidden text-white w-12 h-12">
-              <GiHamburgerMenu size={50} />
-            </div>
+            <BurgerMenu />
           </li>
         </ul>
       </nav>
