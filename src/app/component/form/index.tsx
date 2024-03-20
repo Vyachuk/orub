@@ -19,7 +19,6 @@ import { FaRegSquare } from "react-icons/fa6";
 import { LuCheckSquare } from "react-icons/lu";
 
 import logo from "/public/img/aboutBack.webp";
-import { toast } from "react-toastify";
 
 import dayjs from "dayjs";
 import utcPlugin from "dayjs/plugin/utc";
