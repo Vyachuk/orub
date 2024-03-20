@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 
@@ -8,7 +7,6 @@ import { FormSchema } from "./validate";
 import { Button } from "../UI";
 import TextField from "@material-ui/core/TextField";
 import { LuCalendarDays } from "react-icons/lu";
-import dayjs from "dayjs";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
@@ -17,13 +15,17 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
-import { TiInputChecked } from "react-icons/ti";
-import { BiCheckbox } from "react-icons/bi";
+import { FaRegSquare } from "react-icons/fa6";
+import { LuCheckSquare } from "react-icons/lu";
 
 import logo from "/public/img/aboutBack.webp";
+import { toast } from "react-toastify";
+
+import dayjs from "dayjs";
+import utcPlugin from "dayjs/plugin/utc";
+dayjs.extend(utcPlugin);
 
 import Checkbox from "@mui/material/Checkbox";
-import { TaskDone } from "./icons/TaskDone";
 
 export const FormSection = () => {
   const today = new Date();
@@ -42,10 +44,31 @@ export const FormSection = () => {
       policy: false,
     },
     validationSchema: FormSchema,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: (values, { resetForm }) => {
+      // toast.success("Hello, World!");
+
+      const newBirthday = values.birthday
+        .utc()
+        .set("hour", 0)
+        .set("minute", 0)
+        .set("second", 0)
+        .add(1, "day");
+
+      console.log({
+        ...values,
+        birthday: newBirthday.toString(),
+      });
+      resetForm();
     },
   });
+
+  const isSubmitButtonAvailable =
+    formik.values.fullName &&
+    formik.values.birthday &&
+    formik.values.region &&
+    formik.values.phone &&
+    formik.values.policy &&
+    Object.keys(formik.errors).length === 0;
 
   return (
     <section
@@ -105,7 +128,6 @@ export const FormSection = () => {
                   border: "none",
                 },
               }}
-              // renderInput={(params) => <TextField {...params} />}
             />
           </div>
         </LocalizationProvider>
@@ -123,9 +145,6 @@ export const FormSection = () => {
           sx={{
             m: 1,
             width: "100%",
-            // "& .MuiInput-underline:after": {
-            //   borderBottom: "2px solid white",
-            // },
           }}
         >
           <Select
@@ -213,8 +232,8 @@ export const FormSection = () => {
         <div className="flex my-4 sm:mb-[42px] text-base font-raleway">
           <Checkbox
             // {...label}
-            icon={<TaskDone size={30} color={"white"} />}
-            checkedIcon={<TaskDone size={30} color={"white"} />}
+            icon={<FaRegSquare size={24} color={"white"} />}
+            checkedIcon={<LuCheckSquare size={24} color={"white"} />}
             name="policy"
             checked={formik.values.policy}
             onChange={formik.handleChange}
@@ -232,7 +251,11 @@ export const FormSection = () => {
         </div>
 
         <div className="flex justify-center sm:justify-start items-center">
-          <Button text="Відправити заявку" type="submit" disabled={true} />
+          <Button
+            text="Відправити заявку"
+            type="submit"
+            disabled={!isSubmitButtonAvailable}
+          />
         </div>
       </form>
       <Image
