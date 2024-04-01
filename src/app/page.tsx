@@ -10,6 +10,9 @@ import { VideoSection } from "./component/video";
 import { Donate } from "./component/donate";
 import { Footer } from "./component/footer";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Home() {
   return (
     <>
@@ -27,6 +30,12 @@ export default function Home() {
       </main>
 
       <Footer />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        draggable
+        theme="dark"
+      />
     </>
   );
 }

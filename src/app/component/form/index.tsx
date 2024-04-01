@@ -26,6 +26,7 @@ dayjs.extend(utcPlugin);
 
 import Checkbox from "@mui/material/Checkbox";
 import { sendData } from "./fetch";
+import { toast } from "react-toastify";
 
 export const FormSection = () => {
   const today = new Date();
@@ -45,20 +46,15 @@ export const FormSection = () => {
     },
     validationSchema: FormSchema,
     onSubmit: async (values, { resetForm }) => {
-      // const newBirthday = values.birthday
-      //   .utc()
-      //   .set("hour", 0)
-      //   .set("minute", 0)
-      //   .set("second", 0)
-      //   .add(1, "day");
-
       const result = await sendData({
         ...values,
         birthday: dayjs(values.birthday).format("L"),
       });
-      // toast.success("Hello, World!");
+      if (result) {
+        toast.success("Заявку успішно подано!");
 
-      // resetForm();
+        resetForm();
+      }
     },
   });
 
@@ -70,9 +66,6 @@ export const FormSection = () => {
     formik.values.policy &&
     Object.keys(formik.errors).length === 0;
 
-  useEffect(() => {
-    console.log(formik);
-  }, [formik]);
   return (
     <section
       id="form"
