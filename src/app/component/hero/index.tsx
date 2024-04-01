@@ -10,9 +10,9 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className="hero-backdrop font-nastup bg-no-repeat bg-right object-fit bg-cover w-[100vw] h-[813px] sm:bg-center lx:bg-right"
+      className="hero-backdrop font-nastup bg-no-repeat bg-right object-fit bg-cover w-[100vw] h-[100dvh] sm:h-[813px] sm:bg-center lx:bg-right"
     >
-      <h1 className="font-nastup leading-9 sm:leading-[4rem] text-2xl sm:text-5xl pt-[475px] sm:pt-[200px] font-thin max-w-[450px] sm:max-w-[550px] xl:max-w-[700px] tracking-wide">
+      <h1 className="font-nastup leading-9 sm:leading-[4rem] text-2xl sm:text-5xl pt-[50dvh] sm:pt-[200px] font-thin max-w-[450px] sm:max-w-[550px] xl:max-w-[700px] tracking-wide">
         150 Окремий розвідувально- ударний батальйон
       </h1>
       <div className="w-full h-[4px] border-2 my-2 border-white max-w-[550px] sm:my-6"></div>

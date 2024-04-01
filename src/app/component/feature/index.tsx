@@ -114,7 +114,7 @@ export const Feature = () => {
           />
         </li>
       </ul>
-      <div className="mx-auto my-0">
+      <div className="mx-auto my-0 mt-6">
         <SmoothScrollLink targetId="form">
           <Button text="Приєднатись" handler={() => {}} />
         </SmoothScrollLink>

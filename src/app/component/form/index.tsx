@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 
 import { REGIONS } from "./constants";
@@ -25,6 +25,7 @@ import utcPlugin from "dayjs/plugin/utc";
 dayjs.extend(utcPlugin);
 
 import Checkbox from "@mui/material/Checkbox";
+import { sendData } from "./fetch";
 
 export const FormSection = () => {
   const today = new Date();
@@ -35,7 +36,7 @@ export const FormSection = () => {
   const formik = useFormik({
     initialValues: {
       fullName: "",
-      birthday: dayjs(dateToday),
+      birthday: dayjs("1991/08/24"),
       region: REGIONS[0],
       phone: "",
       profession: "",
@@ -43,21 +44,21 @@ export const FormSection = () => {
       policy: false,
     },
     validationSchema: FormSchema,
-    onSubmit: (values, { resetForm }) => {
+    onSubmit: async (values, { resetForm }) => {
+      // const newBirthday = values.birthday
+      //   .utc()
+      //   .set("hour", 0)
+      //   .set("minute", 0)
+      //   .set("second", 0)
+      //   .add(1, "day");
+
+      const result = await sendData({
+        ...values,
+        birthday: dayjs(values.birthday).format("L"),
+      });
       // toast.success("Hello, World!");
 
-      const newBirthday = values.birthday
-        .utc()
-        .set("hour", 0)
-        .set("minute", 0)
-        .set("second", 0)
-        .add(1, "day");
-
-      console.log({
-        ...values,
-        birthday: newBirthday.toString(),
-      });
-      resetForm();
+      // resetForm();
     },
   });
 
@@ -69,10 +70,13 @@ export const FormSection = () => {
     formik.values.policy &&
     Object.keys(formik.errors).length === 0;
 
+  useEffect(() => {
+    console.log(formik);
+  }, [formik]);
   return (
     <section
       id="form"
-      className="bg-black flex flex-col gap-4 sm:gap-6 py-[40px] sm:pb-[50px] relative overflow-hidden"
+      className="bg-black flex flex-col gap-4 sm:gap-6 py-[40px] sm:pb-[50px] xl:py-[110px] relative overflow-hidden"
     >
       <h2 className=" text-center sm:text-left text-6xl sm:text-5xl font-nastup  leading-10 tracking-wider ">
         {"Анкета"}
@@ -128,6 +132,11 @@ export const FormSection = () => {
                 },
               }}
             />
+            {formik.errors.birthday && (
+              <span style={{ color: "#f44336", fontSize: "12px" }}>
+                {formik.errors.birthday}
+              </span>
+            )}
           </div>
         </LocalizationProvider>
 

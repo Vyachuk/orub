@@ -1,6 +1,8 @@
 import * as Yup from "yup";
 import { REGIONS } from "./constants";
 
+const dayjs = require("dayjs");
+
 export const FormSchema = Yup.object().shape({
   fullName: Yup.string()
     .matches(
@@ -10,8 +12,20 @@ export const FormSchema = Yup.object().shape({
     .required("Повне ім'я обов'язкове для заповнення")
     .max(50, "Занадто довге ім'я!"),
   birthday: Yup.date()
-    .max(new Date(), "Дата народження не може бути пізніше поточної дати")
-    .required("Дата народження обов'язкова для заповнення"),
+    .max(dayjs(), "Дата народження не може бути пізніше поточної дати")
+    .test(
+      "is-eighteen",
+      "Користувач повинен бути не молодше 18 років",
+      function (value) {
+        const minAgeDate = dayjs().subtract(18, "year");
+        return (
+          dayjs(value).isBefore(minAgeDate, "day") ||
+          dayjs(value).isSame(minAgeDate, "day")
+        );
+      }
+    )
+    .required("Дата народження обов'язкова для заповнення")
+    .nullable(),
   region: Yup.string()
     .oneOf(REGIONS, "Будь ласка, виберіть один з наявних регіонів")
     .required("Регіон обов'язковий для вибору"),

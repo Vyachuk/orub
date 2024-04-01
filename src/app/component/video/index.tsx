@@ -17,7 +17,7 @@ const videoData = [
 
 export const VideoSection = () => {
   return (
-    <section className="bg-black flex flex-col gap-4 sm:gap-9 py-[40px] sm:pb-[50px] xl:px-0">
+    <section className="bg-black flex flex-col gap-4 sm:gap-9 py-[40px] sm:py-[110px] xl:px-0">
       <h2 className="mb-3 mx-auto my-0 max-w-[90%] text-center text-xl sm:text-3xl font-normal font-nastup leading-loose leading-7 tracking-wider ">
         {
           '"Коли окупанти засинають, наш батальйон прокидається - готовий діяти, охороняючи мир у темряві."'
