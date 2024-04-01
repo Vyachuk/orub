@@ -132,11 +132,12 @@ export const FormSection = () => {
                 },
               }}
             />
-            {formik.errors.birthday && (
-              <span style={{ color: "#f44336", fontSize: "12px" }}>
-                {formik.errors.birthday}
-              </span>
-            )}
+            {formik.errors.birthday &&
+              typeof formik.errors.birthday === "string" && (
+                <span style={{ color: "#f44336", fontSize: "12px" }}>
+                  {formik.errors.birthday}
+                </span>
+              )}
           </div>
         </LocalizationProvider>
 
